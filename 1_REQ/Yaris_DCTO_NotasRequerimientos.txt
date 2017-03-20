@@ -1,0 +1,39 @@
+2017.03.08
+
+Requerimientos de alto nivel:
+Inventarios.
+Ventas.
+Punto de venta.
+URGE: Calcular costos de cada artículo.
+
+Módulos previstos:
+Ingresar ventas.
+Calcular ganancias.
+Calcular existencias.
+Control de caducidad.
+Facturación.
+Revisar inventarios.
+Análisis de ventas.
+Contrl de ventas foraneas.
+
+Producen:
+Pasteles.
+Pastas.
+Galletas.
+Postres (Gelatinas, flan carlota, entre otros).
+
+Procesos de negocio:
+Trabajo normal:
+- Temprano Celia bate y deja las cosas listas para que la gente horneé.
+- Los empleados preparan los pasteles, galletas y postres y los dejan listos para la venta.
+- Celia sale a repartir diario con sus clientes.
+- Cuando las ventas ocurren, se reportan y se hace corte.
+
+Respecto a inventarios:
+Normalmente se meten cajas, bultos o paquetes y salen piezas, kilos o litros.
+Cada semana se revisa cuánta materia prima hay y se hacen pedidos.
+Es importante definir en qué momento se va a comprar cada artículo.
+Cuando el precio de un insumo sube, todo el disponible en almacén se considera que subió.
+
+
+Importa mucho mantaner la confidencialidad de las recetas.
