@@ -44,6 +44,7 @@
 <relation table="ListaPreciosDetalle" row="idArtículo" />
 <relation table="ProductosIngredientes" row="idProducto" />
 <relation table="Movimientos" row="idArticulo" />
+<relation table="OrdenesProducciónDetalle" row="idProducto" />
 </row>
 <row name="Nombre" null="1" autoincrement="0">
 <datatype>VARCHAR(150)</datatype>
@@ -94,7 +95,7 @@
 <part>idArticulo</part>
 </key>
 </table>
-<table x="559" y="10" name="ProductosIngredientes">
+<table x="556" y="7" name="ProductosIngredientes">
 <row name="idProducto" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -122,30 +123,6 @@
 <key type="PRIMARY" name="">
 <part>idListaPrecios</part>
 <part>idArtículo</part>
-</key>
-</table>
-<table x="980" y="9" name="Productos">
-<row name="idProducto" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="ProductosIngredientes" row="idProducto" />
-</row>
-<row name="Nombre" null="1" autoincrement="0">
-<datatype>VARCHAR(150)</datatype>
-<default>NULL</default></row>
-<row name="Codigo" null="1" autoincrement="0">
-<datatype>VARCHAR(20)</datatype>
-<default>NULL</default></row>
-<row name="EsIngrediente" null="1" autoincrement="0">
-<datatype>TINYINT</datatype>
-<default>NULL</default></row>
-<row name="Caducidad" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="Costo" null="1" autoincrement="0">
-<datatype>DECIMAL</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>idProducto</part>
 </key>
 </table>
 <table x="618" y="131" name="ListaPrecios">
@@ -223,7 +200,7 @@
 <part>idOrden</part>
 </key>
 </table>
-<table x="272" y="388" name="OrdenesProducciónDetalle">
+<table x="230" y="388" name="OrdenesProducciónDetalle">
 <row name="Fecha" null="1" autoincrement="0">
 <datatype>DATE</datatype>
 <default>NULL</default><relation table="OrdenesProducción" row="Fecha" />
@@ -244,16 +221,13 @@
 <row name="Estatus" null="1" autoincrement="0">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
-<row name="CantidadParcial" null="1" autoincrement="0">
-<datatype>DECIMAL</datatype>
-<default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>Fecha</part>
 <part>idOrden</part>
 <part>idProducto</part>
 </key>
 </table>
-<table x="704" y="388" name="Ventas">
+<table x="859" y="388" name="Ventas">
 <row name="idVenta" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -262,8 +236,7 @@
 <default>NULL</default></row>
 <row name="ListaPrecios" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="ListaPreciosDetalle" row="idListaPrecios" />
-</row>
+<default>NULL</default></row>
 <row name="Subtotal" null="1" autoincrement="0">
 <datatype>DECIMAL</datatype>
 <default>NULL</default></row>
@@ -283,7 +256,7 @@
 <part>idVenta</part>
 </key>
 </table>
-<table x="534" y="388" name="VentasDetalle">
+<table x="617" y="398" name="VentasDetalle">
 <row name="idVenta" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="Ventas" row="idVenta" />
@@ -291,6 +264,10 @@
 <row name="idProducto" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="Articulos" row="idArticulo" />
+</row>
+<row name="ListaPrecios" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="ListaPrecios" row="idListaPrecios" />
 </row>
 <row name="Cantidad" null="1" autoincrement="0">
 <datatype>DECIMAL</datatype>
