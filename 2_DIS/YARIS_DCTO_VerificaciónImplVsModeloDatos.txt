@@ -1,0 +1,24 @@
+Verificación de implementación vs modelo de datos
+Proyecto: YARIS
+Tabla: Unidades.
+- El campo "Abreviatura" está demás. Revisar la pertinencia.
+- El campo "Estatus" indica si está activo lógicamente. Revisar si se puede cambiar el nombre.
+Tabla: Ingredientes.
+- El campo "Alertar" debe ser booleano.
+- El campo "Caducidad" debe ser entero. Revisar cómose va a manejar lógicamente este campo.
+- El campo "Estatus" indica si está activo lógicamente. Revisar si se puede cambiar el nombre.
+Tabla: ProductosIngredientes.
+- Falta el campo "IdProducto".
+- El campo "Estatus" indica si está activo lógicamente. Revisar si se puede cambiar el nombre.
+Tabla: Movimientos.
+- El campo "Cantidad" debería ser double. CAMBIAR TAMBIÉN EN EL MODELO (TAMBIÉN CAMBIAR EN EL MODELO, EL TIPO DEL CAMPO "PRECIO").
+- El campo "Estatus" indica si está activo lógicamente. Revisar si se puede cambiar el nombre.
+Tabla: OrdenesProduccion.
+- El campo "Orden" parece venir de otra tabla. PREGUNTAR CÓMO FUNCIONA ESTO.
+- El campo "Estatus" indica si está activo lógicamente. Revisar si se puede cambiar el nombre.
+Tabla: ListaPrecios.
+- El campo "Estatus" indica si está activo lógicamente. Revisar si se puede cambiar el nombre.
+Tabla: ListaPreciosDetalle.
+- Falta el campo "IdListaPrecios".
+- El campo "Estatus" indica si está activo lógicamente. Revisar si se puede cambiar el nombre.
+Faltan las tablas: "Ventas" y "VentasDetalle"

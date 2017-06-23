@@ -1,0 +1,39 @@
+# Instalar pip.
+sudo apt-get install python-pip
+# Instalar virtualenv con pip.
+sudo pip install virtualenv
+# Moverse al directorio donde se alojará la virtualenv
+cd [directorio donde se alojará el directorio del entorno virtual]
+# Crear la virtualenv
+virtualenv [nombre del directorio del entorno virtual]
+# Arrancar la virtualenv
+source [nombre del directorio del entorno virtual]/bin/activate
+******* A PARTIR DE AQUÍ ESTAREMOS TRABAJANDO EN LA VIRTUALENV *******
+# Instalar Django en la virtualenv
+pip install django
+### Probar que ya está instalado Django en la virtualenv
+# Arrancar la shell de Python
+python
+# Importar Django
+import django (no debe marcar errores)
+# Terminar la shell de Python
+quit()
+# Terminar el virtualenv
+deactivate
+
+Conectarse al kayon con ssh:
+ssh pi@kayon.uaz.edu.mx
+
+Para dar de alta la BD cuando esta ya está creada y vacía (Hay que estar con el virtual enviroment adecuado activado):
+python manage.py migrate
+python manage.py makemigrations
+python manage.py migrate
+
+Para actualizar las cosas necesarias por el pychar (Hay que estar con el virtual enviroment adecuado activado):
+pip install -r requicitos.txt
+Probablemente se va a necesitar para hacer lo anterior:
+sudo apt-get install python-dev
+sudo apt-get install libmysqld-dev
+
+Para generar / actualizar el usuario de la BD (Hay que estar con el virtual enviroment adecuado activado):
+python manage.py createsuperuser
